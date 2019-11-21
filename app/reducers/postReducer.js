@@ -6,15 +6,14 @@ const initialState = {
 };
 
 export const postReducer = createReducer(initialState, {
-    [actionTypes.POST_REQUEST](state) {
-        return { ...state };
-    },
+    
     [actionTypes.POST_RESPONSE](state, action) {
         return {
             ...state,
             post:action.response
         };
     },
+    
     [actionTypes.POST_FAILED](state) {
         return {
             ...state,

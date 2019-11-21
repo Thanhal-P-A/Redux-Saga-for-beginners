@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     marginBottom: 5 * h,
   },
   viewHead: {
-    backgroundColor: '#7140FE',
+    backgroundColor: '#346536',
     height: 6 * h,
     alignItems: 'center',
     justifyContent: 'center',
@@ -22,46 +22,30 @@ const styles = StyleSheet.create({
     fontSize: 5 * w,
     fontWeight: 'bold',
   },
-  viewUser: {
-    paddingLeft: 8 * w,
+  button: {
+    backgroundColor: '#282548',
+    padding: 10,
+    borderRadius: 25,
+    width:"80%",
+    height:50,
+    alignItems:'center',
+    justifyContent:'center',
+    alignSelf:'center',
+    margin:15
   },
-  imageUser: {
-    height: 11 * h,
-    width: 11 * h,
-    borderRadius: 5.5 * h,
-    marginVertical: h,
-  },
-  textUser: {
-    color: '#6F3FFB',
-    fontSize: 4 * h,
-    fontWeight: 'bold',
-  },
-  textRequestNo: {
-    color: '#383838',
-    fontSize: 2 * h,
-    padding: w,
-    fontWeight: '500',
-  },
-  viewFlatListRequest: {
-    paddingLeft: 8 * w,
+  textButton: {
+    fontSize: 16,
+    color:"white"
   },
   flatList: {
     marginVertical: 3 * h,
     marginLeft: w,
     height: 20 * h,
   },
-  textBlogTitle: {
-    color: '#383838',
-    fontSize: 2 * h,
-    paddingLeft: 9 * w,
-    marginTop: 4 * h,
-    fontWeight: '500',
-    marginBottom: h,
-  },
-  viewFlatListBlog: {
+  viewFlatListPost: {
     paddingLeft: 8 * w,
   },
-  blogContainer: {
+  postContainer: {
     height: 18.5 * h,
     width: 35 * w,
     backgroundColor: 'white',
@@ -69,7 +53,7 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     elevation: 4,
   },
-  imageBlog: {
+  imagePost: {
     borderTopLeftRadius: 6,
     borderTopRightRadius: 6,
     height: 10 * h,

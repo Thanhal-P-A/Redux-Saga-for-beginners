@@ -8,11 +8,6 @@ export class HomeScreenContainer extends Component {
         super(props);
         
     }
-
-    componentDidMount(){
-        this.props.requestPost();
-    }
-
     render() {
         return <HomeScreen {...this.props} />;
     }

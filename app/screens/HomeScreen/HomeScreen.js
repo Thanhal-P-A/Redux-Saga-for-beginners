@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Image, FlatList} from 'react-native';
+import {View, Text, Image, FlatList, TouchableOpacity} from 'react-native';
 import styles from './styles';
 
 export default class HomeScreen extends Component {
@@ -7,30 +7,39 @@ export default class HomeScreen extends Component {
     super(props);
   }
 
-  blogCard=({item,index})=> {
+  _OnPressGetPost = () => {
+    this.props.requestPost();
+  };
+
+  _postCard = ({item, index}) => {
     return (
-      <View style={styles.blogContainer}>
-        <Image style={styles.imageBlog} source={{uri: item.image}} />
+      <View style={styles.postContainer}>
+        <Image style={styles.imagePost} source={{uri: item.image}} />
         <Text style={styles.textName}>{item.name}</Text>
         <Text style={styles.textSubtitle}>{item.subtitle}</Text>
       </View>
     );
-  }
+  };
 
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.viewHead}>
-          <Text style={styles.textHead}>Blogs</Text>
+          <Text style={styles.textHead}>Posts</Text>
         </View>
-        <View style={styles.viewFlatListBlog}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => this._OnPressGetPost()}>
+          <Text style={styles.textButton}>Click here to get posts</Text>
+        </TouchableOpacity>
+        <View style={styles.viewFlatListPost}>
           <FlatList
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             style={styles.flatList}
             data={this.props.post}
             extraData={this.props}
-            renderItem={(item, index) => this.blogCard(item, index)}
+            renderItem={(item, index) => this._postCard(item, index)}
             keyExtractor={(item, index) => item.id}
           />
         </View>
